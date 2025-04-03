@@ -1,6 +1,5 @@
 class StudentService{
-
-    
+    //Simular datos e base de datos
     private myMap = new Map<string, [number, boolean, string]>([
         ['a00001', [95, true, 'Maria']],
         ['a00002', [97, false, 'James']],
@@ -9,11 +8,8 @@ class StudentService{
         ['a00005', [10, true, 'Bob']],
         ['a00006', [43, false, 'Mina']]
       ])
-
     async getAllStudents():Promise<Map<string, [number, boolean, string]>>{
       return this.myMap;
     }
-   
   }
-  
 export const studentService= new StudentService;
