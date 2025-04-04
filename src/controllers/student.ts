@@ -9,7 +9,7 @@ class StudentController{
     }
       
     async AllStudentsFilter() {
-        const datastudentfilter: [string, string][] = [];
+        const datastudentfilter: {Nombre: string; Alerta: string}[] = [];
         const students = await studentService.getAllStudents();
     
         for (const student of students) {
@@ -27,7 +27,7 @@ class StudentController{
                 alerta="Como no tienes adeudo tienes derecho a un examen de recuperación";
             }
 
-            datastudentfilter.push([student[1], alerta]); 
+            datastudentfilter.push({Nombre: student[1], Alerta: alerta }); 
         }
     
         return datastudentfilter;
