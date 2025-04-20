@@ -5,5 +5,12 @@ module.exports = {
     transform: {
       '^.+\\.ts$': 'ts-jest',
     },
-    testMatch: ['**/tests/**/*.test.ts'],
+    testMatch: ['**/*.test.ts'],
+    testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+    collectCoverage: true,
+    coverageDirectory: 'coverage',
+    coverageReporters: ['text-summary', 'lcov'],
   };
+
+  
+  

@@ -6,8 +6,8 @@ app.use(express.json());
 
 
 app.use('/alumnos', studentRoutes);
-app.use('/data', dataRoutes);
+app.use('/data', dataRoutes); //Tarea
 
 
 const PORT = process.env.PORT || 3001;
-app.listen(PORT, () => console.log('Server running'))
+app.listen(PORT, () => console.log(`Server running ${PORT}`))
