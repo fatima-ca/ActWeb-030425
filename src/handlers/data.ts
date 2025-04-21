@@ -1,3 +1,4 @@
+//En handler no se impelemnta lógica
 import {  Request, Response, NextFunction } from 'express';
 import  DataController  from '../controllers/data'
 

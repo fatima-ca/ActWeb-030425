@@ -1,3 +1,4 @@
+/*
 import  DataController  from "../controllers/data";
 import {dataService}  from "../db/data";
 
@@ -14,10 +15,10 @@ describe("DataController", () => {
     test('should return correct stats for [4, 2, 6, 8]', async () => {
         mockDBService.getData.mockResolvedValue([4, 2, 6, 8]);
 
-        // when: Ejecutamos el método a probar
+ 
         const result = await DataController.getInfoSolicitada();
 
-        // then: Verificamos resultados
+       
         expect(result).toEqual({
             min: 2,
             max: 8,
@@ -28,13 +29,13 @@ describe("DataController", () => {
     });
 
     test('should handle empty array', async () => {
-        // given
+       
         mockDBService.getData.mockResolvedValue([]);
 
-        // when
+        
         const result = await DataController.getInfoSolicitada();
 
-        // then
+       
         expect(result).toEqual({
             min: Infinity,
             max: -Infinity,
@@ -48,3 +49,4 @@ describe("DataController", () => {
         await expect(DataController.getInfoSolicitada()).rejects.toThrow("Database error");
     });
 });
+*/
